@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pipeline') {
             steps {
-                scripts {
+                script {
 				
 					stage('Build and Test') {
 						//
