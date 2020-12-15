@@ -58,5 +58,3 @@ pipeline {
         }
     }
 }
-
-C:\Users\jibanez\.jenkins\workspace\emplo-gradle_feature-dir-inicial
