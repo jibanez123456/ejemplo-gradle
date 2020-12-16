@@ -39,7 +39,7 @@ pipeline {
 								   [
 									   classifier: '', 
 									   extension: 'jar', 
-									   filePath: 'C:\\Users\\jibanez\\.jenkins\\workspace\\emplo-gradle_feature-dir-inicial\\DevOpsUsach2020-0.0.1.jar'
+									   filePath: 'C:\\Users\\jibanez\\.jenkins\\workspace\\emplo-gradle_feature-dir-inicial\\build\\libs\\DevOpsUsach2020-0.0.1.jar'
 									]
 								], 
 								mavenCoordinate: [
