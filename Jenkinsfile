@@ -32,7 +32,6 @@ pipeline {
 					}
 					stage('Nexus') {
 						//
-						steps {
 						   nexusPublisher nexusInstanceId: 'nexus', 
 						   nexusRepositoryId: 'test-repo',
 						   packages: [
@@ -51,7 +50,7 @@ pipeline {
 								]
 							]
 						]
-						}
+						
 					}
 				}
             }
