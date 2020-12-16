@@ -21,8 +21,8 @@ pipeline {
 						}
 					}
 					stage('Run') {
-						//
-						bat "gradle bootRun &"
+						// bat "gradle bootRun &"
+						sh 'gradle bootRun &'
 						sleep 20
 					}
 					stage('Test') {
@@ -40,7 +40,7 @@ pipeline {
 								   [
 									   classifier: '', 
 									   extension: 'jar', 
-									   filePath: 'C:\\Users\\jibanez\\.jenkins\\workspace\\emplo-gradle_feature-dir-inicial\\DevOpsUsach2020-0.0.1.jar'
+									   filePath: 'C:\\Users\\jibanez\\.jenkins\\workspace\\ejemplo-gradle_feature-dir-inicial\\DevOpsUsach2020-0.0.1.jar'
 									]
 								], 
 								mavenCoordinate: [
