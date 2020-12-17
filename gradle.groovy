@@ -8,7 +8,7 @@ def call(){
   
 	stage('Build and Test') {
 		// sh ".gladlew clean build"
-		sh 'gradlew clean build'
+		sh 'gradle clean build'
 	}
 	stage('Sonar') {
 		// configurado en sonarcube-configuration
