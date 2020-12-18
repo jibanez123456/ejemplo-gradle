@@ -30,11 +30,11 @@ pipeline {
     post {
 
     	success {
-    		 slackSend message: '[José Ibañez] [' + env.JOB_NAME + '] [' + params.tool  + '] [Ejecución exitosa] ', teamDomain: 'devops-usach-2020', tokenCredentialId: 'slacktoken'
+    		 slackSend message: '[Jose Ibañez] [' + env.JOB_NAME + '] [' + params.tool  + '] [Ejecucion exitosa] ', teamDomain: 'devops-usach-2020', tokenCredentialId: 'slacktoken'
     	}
 
     	failure {
-    		 slackSend message: '[José Ibañez] [' + env.JOB_NAME + '] [' + params.tool  + '] [Ejecución fallida en stage:' + env.ETAPA + '] ', teamDomain: 'devops-usach-2020', tokenCredentialId: 'slacktoken'
+    		 slackSend message: '[Jose Ibañez] [' + env.JOB_NAME + '] [' + params.tool  + '] [Ejecucion fallida en stage:' + env.TAREA + '] ', teamDomain: 'devops-usach-2020', tokenCredentialId: 'slacktoken'
     	}
     }
 }

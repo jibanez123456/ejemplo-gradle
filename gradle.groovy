@@ -8,10 +8,12 @@ def call(){
   
 	stage('Build and Test') {
 		// sh ".gladlew clean build"
+		env.TAREA = env.STAGE_NAME
 		sh 'gradle clean build'
 	}
 	stage('Sonar') {
 		// configurado en sonarcube-configuration
+		env.TAREA = env.STAGE_NAME
 		def scannerHome = tool 'sonar-scanner';
 		
 		// conf generales
@@ -22,16 +24,19 @@ def call(){
 	}
 	stage('Run') {
 		// bat "gradle bootRun &"
+		env.TAREA = env.STAGE_NAME
 		sh 'gradle bootRun &'
 		sleep 20
 	}
 	stage('Test') {
 		//
+		env.TAREA = env.STAGE_NAME
 		sh 'curl -X GET http://localhost:8081/rest/mscovid/test?msg=testing'
 
 	}
 	stage('Nexus') {
 		//
+		env.TAREA = env.STAGE_NAME
 		   nexusPublisher nexusInstanceId: 'nexus', 
 		   nexusRepositoryId: 'test-repo',
 		   packages: [
